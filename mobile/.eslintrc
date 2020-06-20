@@ -1,0 +1,51 @@
+{
+  "env": {
+    "react-native/react-native": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "react-native/style-sheet-object-names": [
+      "EStyleSheet",
+      "OtherStyleSheet",
+      "PStyleSheet"
+    ]
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "ignorePatterns": ["*.test.js"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "max-len": ["error", { "code": 120, "comments": 150 }],
+    "semi": ["error", "always"],
+    "no-console": 1,
+    "comma-dangle": ["error", "never"],
+    "react/prop-types": [1],
+    "react/display-name": [1],
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 0,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": [2, { "skip": ["MonoText"] }],
+    "react-native/no-single-element-style-arrays": 2
+  }
+}
