@@ -1,4 +1,4 @@
-import publicConfig from './public.js';
+import publicConfig from './config.public.js';
 import privateConfig from './config.private.js';
 
 const config = {

@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import router from './routes/index.js';
 import config from './config/default.js';
 
-mongoose.connect(config.databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(config.database.url, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 mongoose.connection.on('error', console.error);
 
@@ -17,6 +17,6 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.listen(config.port, () => {
+app.listen(config.app.port, () => {
   console.log('Server is running');
 });

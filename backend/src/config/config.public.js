@@ -1,5 +1,7 @@
 const publicConfig = {
-  port: 3001
+  app: {
+    port: 3001
+  }
 };
 
 export default publicConfig;
